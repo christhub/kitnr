@@ -1,0 +1,54 @@
+<div class="hdr">
+  <div class="ui container">
+    <img src="img/kitnr-logo.png" />
+    <nav class="nav">
+      {{#link-to 'index' class='nav_link'}}Home{{/link-to}}
+      {{#link-to 'post' class='nav_link'}}Posts{{/link-to}}
+      {{#link-to 'user' '-K3GIRQUOzq3a8lGirBq' class='nav_link'}}Profile{{/link-to}}
+    </nav>
+  </div>
+</div>
+
+<div class="ui container">
+  <div class="ui grid">
+    <div class="six wide column">
+
+      <div class="ui fluid card">
+        <div class="image">
+          <img src="https://s.gravatar.com/avatar/{{model.gravatar}}?s=400" alt="Profile">
+        </div>
+        <div class="content">
+          <a class="header">{{model.name}}</a>
+          <div class="description">
+            {{model.description}}
+          </div>
+        </div>
+        <div class="extra content">
+          <i class="user icon"></i>
+            22 posts
+        </div>
+      </div>
+
+    </div>
+    <div class="ten wide column">
+      {{outlet}}
+      <!-- <div class="ui fluid card">
+        <div class="image">
+          <img src="img/kitten1.jpg" alt="kitten"/>
+        </div>
+        <div class="content">
+          <h2 class="header">Header</h2>
+          <div class="description">
+            the description
+          </div>
+        </div>
+      </div>
+
+      <div class="ui fluid card">
+        <div class="image">
+          <img src="img/kitten2.jpg" alt="kitten" />
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
